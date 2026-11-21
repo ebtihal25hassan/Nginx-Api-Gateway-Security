@@ -12,7 +12,7 @@ I did not click through the console. Everything here (EC2, Security Group, NGINX
  
 ## Architecture
  
-![Architecture diagram](docs/architecture.svg)
+![Architecture diagram](<img width="1280" height="757" alt="5766928218878316712" src="https://github.com/user-attachments/assets/cd0f8b46-cfef-43ba-9035-27660630991b" />)
  
 ```
 Client -> EC2 (NGINX) -> API Gateway -> Lambda Authorizer -> Lambda users-handler
@@ -172,19 +172,6 @@ These are the status codes I actually got when I ran the tests.
 | 3 | Missing student ID | 403 | 403 |
 | 4 | Invalid token | 403 | 403 |
 | 5 | Undefined route | 404 | 404 |
- 
- 
-| What | File |
-|---|---|
-| NGINX default page on the EC2 public IP | `01-nginx-default.png` |
-| 200 through NGINX | `02-valid-via-nginx.png` |
-| 200 direct to API Gateway | `03-valid-direct.png` |
-| 403, invalid environment | `04-invalid-env.png` |
-| 403, missing student ID | `05-missing-student-id.png` |
-| 403, invalid token | `06-invalid-token.png` |
-| 404, undefined route | `07-undefined-route.png` |
-| EC2 instance and Security Group | `08-ec2-security-group.png` |
-| API Gateway route with authorizer | `09-api-gateway.png` |
  
 ## Notes
  
