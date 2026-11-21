@@ -12,12 +12,10 @@ I did not click through the console. Everything here (EC2, Security Group, NGINX
  
 ## Architecture
  
-![Architecture diagram](<img width="1280" height="757" alt="5766928218878316712" src="https://github.com/user-attachments/assets/cd0f8b46-cfef-43ba-9035-27660630991b" />)
+<img width="1280" height="757" alt="5766928218878316712" src="https://github.com/user-attachments/assets/6a40e554-c942-4dc9-a2e0-4619aa3c9764" />
+
  
 ```
-Client -> EC2 (NGINX) -> API Gateway -> Lambda Authorizer -> Lambda users-handler
-                              ^
-              SSM Parameter Store (token, read by NGINX host at boot)
 ```
  
 NGINX adds these headers to every proxied request:
